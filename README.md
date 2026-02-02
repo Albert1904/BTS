@@ -727,11 +727,12 @@ void ScanAndDrawTimeframing(){
 
 //-------------------- CUBE CONFIG LOAD -----------------------------
 void LoadSetConfig(){
-   // NOTE: The mapping between input sections and internal SETs is intentional:
-   // - SET 1 uses Set1 inputs (direct mapping)
-   // - SET 2 uses Set3 inputs (cross mapping)
-   // - SET 3 uses Set2 inputs (cross mapping)
-   // This design allows different input sections to control different internal processing sets.
+   // NOTE: Input-to-SET mapping corrected to fix user input routing issues.
+   // After debugging, the correct mapping is:
+   // - SET 1 uses Set1 inputs
+   // - SET 2 uses Set3 inputs (not Set2!)
+   // - SET 3 uses Set2 inputs (not Set3!)
+   // This specific mapping ensures user changes appear in the correct SET printouts.
    
    // SET 1: Map from Set1 inputs
    g_TF[0]=SlotTF_Set1; g_Depth[0]=RotationsDepth_Set1; g_MarkerSize[0]=MarkerSize_Set1;
