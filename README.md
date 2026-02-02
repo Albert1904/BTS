@@ -740,31 +740,31 @@ void LoadSetConfig(){
    g_Color[0][CE_HV_HR]=Color_HV_HR_Set1; g_Color[0][CE_LV_LR]=Color_LV_LR_Set1; g_Color[0][CE_HV]=Color_HV_Set1;
    g_Color[0][CE_LV]=Color_LV_Set1; g_Color[0][CE_HR]=Color_HR_Set1; g_Color[0][CE_LR]=Color_LR_Set1;
 
-   // SET 2: Map from Set2 inputs  
-   g_TF[1]=SlotTF_Set2; g_Depth[1]=RotationsDepth_Set2; g_MarkerSize[1]=MarkerSize_Set2;
-   g_Collapse[1]=CollapseTable_Set2; g_Draw[1]=DrawMarkers_Set2; g_Sound[1]=PlaySound_Set2; g_SoundFile[1]=AlertSound_Set2;
+   // SET 2: Map from Set3 inputs  
+   g_TF[1]=SlotTF_Set3; g_Depth[1]=RotationsDepth_Set3; g_MarkerSize[1]=MarkerSize_Set3;
+   g_Collapse[1]=CollapseTable_Set3; g_Draw[1]=DrawMarkers_Set3; g_Sound[1]=PlaySound_Set3; g_SoundFile[1]=AlertSound_Set3;
 
-   g_Enable[1][CE_HV_HR]=Enable_HV_HR_Set2; g_Enable[1][CE_LV_LR]=Enable_LV_LR_Set2; g_Enable[1][CE_HV]=Enable_HV_Set2;
-   g_Enable[1][CE_LV]=Enable_LV_Set2; g_Enable[1][CE_HR]=Enable_HR_Set2; g_Enable[1][CE_LR]=Enable_LR_Set2;
+   g_Enable[1][CE_HV_HR]=Enable_HV_HR_Set3; g_Enable[1][CE_LV_LR]=Enable_LV_LR_Set3; g_Enable[1][CE_HV]=Enable_HV_Set3;
+   g_Enable[1][CE_LV]=Enable_LV_Set3; g_Enable[1][CE_HR]=Enable_HR_Set3; g_Enable[1][CE_LR]=Enable_LR_Set3;
 
-   g_Thresh[1][CE_HV_HR]=ThresholdPct_HV_HR_Set2; g_Thresh[1][CE_LV_LR]=ThresholdPct_LV_LR_Set2; g_Thresh[1][CE_HV]=ThresholdPct_HV_Set2;
-   g_Thresh[1][CE_LV]=ThresholdPct_LV_Set2; g_Thresh[1][CE_HR]=ThresholdPct_HR_Set2; g_Thresh[1][CE_LR]=ThresholdPct_LR_Set2;
+   g_Thresh[1][CE_HV_HR]=ThresholdPct_HV_HR_Set3; g_Thresh[1][CE_LV_LR]=ThresholdPct_LV_LR_Set3; g_Thresh[1][CE_HV]=ThresholdPct_HV_Set3;
+   g_Thresh[1][CE_LV]=ThresholdPct_LV_Set3; g_Thresh[1][CE_HR]=ThresholdPct_HR_Set3; g_Thresh[1][CE_LR]=ThresholdPct_LR_Set3;
 
-   g_Color[1][CE_HV_HR]=Color_HV_HR_Set2; g_Color[1][CE_LV_LR]=Color_LV_LR_Set2; g_Color[1][CE_HV]=Color_HV_Set2;
-   g_Color[1][CE_LV]=Color_LV_Set2; g_Color[1][CE_HR]=Color_HR_Set2; g_Color[1][CE_LR]=Color_LR_Set2;
+   g_Color[1][CE_HV_HR]=Color_HV_HR_Set3; g_Color[1][CE_LV_LR]=Color_LV_LR_Set3; g_Color[1][CE_HV]=Color_HV_Set3;
+   g_Color[1][CE_LV]=Color_LV_Set3; g_Color[1][CE_HR]=Color_HR_Set3; g_Color[1][CE_LR]=Color_LR_Set3;
 
-   // SET 3: Map from Set3 inputs
-   g_TF[2]=SlotTF_Set3; g_Depth[2]=RotationsDepth_Set3; g_MarkerSize[2]=MarkerSize_Set3;
-   g_Collapse[2]=CollapseTable_Set3; g_Draw[2]=DrawMarkers_Set3; g_Sound[2]=PlaySound_Set3; g_SoundFile[2]=AlertSound_Set3;
+   // SET 3: Map from Set2 inputs
+   g_TF[2]=SlotTF_Set2; g_Depth[2]=RotationsDepth_Set2; g_MarkerSize[2]=MarkerSize_Set2;
+   g_Collapse[2]=CollapseTable_Set2; g_Draw[2]=DrawMarkers_Set2; g_Sound[2]=PlaySound_Set2; g_SoundFile[2]=AlertSound_Set2;
 
-   g_Enable[2][CE_HV_HR]=Enable_HV_HR_Set3; g_Enable[2][CE_LV_LR]=Enable_LV_LR_Set3; g_Enable[2][CE_HV]=Enable_HV_Set3;
-   g_Enable[2][CE_LV]=Enable_LV_Set3; g_Enable[2][CE_HR]=Enable_HR_Set3; g_Enable[2][CE_LR]=Enable_LR_Set3;
+   g_Enable[2][CE_HV_HR]=Enable_HV_HR_Set2; g_Enable[2][CE_LV_LR]=Enable_LV_LR_Set2; g_Enable[2][CE_HV]=Enable_HV_Set2;
+   g_Enable[2][CE_LV]=Enable_LV_Set2; g_Enable[2][CE_HR]=Enable_HR_Set2; g_Enable[2][CE_LR]=Enable_LR_Set2;
 
-   g_Thresh[2][CE_HV_HR]=ThresholdPct_HV_HR_Set3; g_Thresh[2][CE_LV_LR]=ThresholdPct_LV_LR_Set3; g_Thresh[2][CE_HV]=ThresholdPct_HV_Set3;
-   g_Thresh[2][CE_LV]=ThresholdPct_LV_Set3; g_Thresh[2][CE_HR]=ThresholdPct_HR_Set3; g_Thresh[2][CE_LR]=ThresholdPct_LR_Set3;
+   g_Thresh[2][CE_HV_HR]=ThresholdPct_HV_HR_Set2; g_Thresh[2][CE_LV_LR]=ThresholdPct_LV_LR_Set2; g_Thresh[2][CE_HV]=ThresholdPct_HV_Set2;
+   g_Thresh[2][CE_LV]=ThresholdPct_LV_Set2; g_Thresh[2][CE_HR]=ThresholdPct_HR_Set2; g_Thresh[2][CE_LR]=ThresholdPct_LR_Set2;
 
-   g_Color[2][CE_HV_HR]=Color_HV_HR_Set3; g_Color[2][CE_LV_LR]=Color_LV_LR_Set3; g_Color[2][CE_HV]=Color_HV_Set3;
-   g_Color[2][CE_LV]=Color_LV_Set3; g_Color[2][CE_HR]=Color_HR_Set3; g_Color[2][CE_LR]=Color_LR_Set3;
+   g_Color[2][CE_HV_HR]=Color_HV_HR_Set2; g_Color[2][CE_LV_LR]=Color_LV_LR_Set2; g_Color[2][CE_HV]=Color_HV_Set2;
+   g_Color[2][CE_LV]=Color_LV_Set2; g_Color[2][CE_HR]=Color_HR_Set2; g_Color[2][CE_LR]=Color_LR_Set2;
 }
 
 string EnabledSummary(int set){
