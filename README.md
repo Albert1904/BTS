@@ -727,31 +727,38 @@ void ScanAndDrawTimeframing(){
 
 //-------------------- CUBE CONFIG LOAD -----------------------------
 void LoadSetConfig(){
-   // SET 1: Map from Set3 inputs (timeframing ranges)
-   g_TF[0]=SlotTF_Set3; g_Depth[0]=RotationsDepth_Set3; g_MarkerSize[0]=MarkerSize_Set3;
-   g_Collapse[0]=CollapseTable_Set3; g_Draw[0]=DrawMarkers_Set3; g_Sound[0]=PlaySound_Set3; g_SoundFile[0]=AlertSound_Set3;
+   // NOTE: Input-to-SET mapping corrected to fix user input routing issues.
+   // After debugging, the correct mapping is:
+   // - SET 1 uses Set1 inputs
+   // - SET 2 uses Set3 inputs (not Set2!)
+   // - SET 3 uses Set2 inputs (not Set3!)
+   // This specific mapping ensures user changes appear in the correct SET printouts.
+   
+   // SET 1: Map from Set1 inputs
+   g_TF[0]=SlotTF_Set1; g_Depth[0]=RotationsDepth_Set1; g_MarkerSize[0]=MarkerSize_Set1;
+   g_Collapse[0]=CollapseTable_Set1; g_Draw[0]=DrawMarkers_Set1; g_Sound[0]=PlaySound_Set1; g_SoundFile[0]=AlertSound_Set1;
 
-   g_Enable[0][CE_HV_HR]=Enable_HV_HR_Set3; g_Enable[0][CE_LV_LR]=Enable_LV_LR_Set3; g_Enable[0][CE_HV]=Enable_HV_Set3;
-   g_Enable[0][CE_LV]=Enable_LV_Set3; g_Enable[0][CE_HR]=Enable_HR_Set3; g_Enable[0][CE_LR]=Enable_LR_Set3;
+   g_Enable[0][CE_HV_HR]=Enable_HV_HR_Set1; g_Enable[0][CE_LV_LR]=Enable_LV_LR_Set1; g_Enable[0][CE_HV]=Enable_HV_Set1;
+   g_Enable[0][CE_LV]=Enable_LV_Set1; g_Enable[0][CE_HR]=Enable_HR_Set1; g_Enable[0][CE_LR]=Enable_LR_Set1;
 
-   g_Thresh[0][CE_HV_HR]=ThresholdPct_HV_HR_Set3; g_Thresh[0][CE_LV_LR]=ThresholdPct_LV_LR_Set3; g_Thresh[0][CE_HV]=ThresholdPct_HV_Set3;
-   g_Thresh[0][CE_LV]=ThresholdPct_LV_Set3; g_Thresh[0][CE_HR]=ThresholdPct_HR_Set3; g_Thresh[0][CE_LR]=ThresholdPct_LR_Set3;
+   g_Thresh[0][CE_HV_HR]=ThresholdPct_HV_HR_Set1; g_Thresh[0][CE_LV_LR]=ThresholdPct_LV_LR_Set1; g_Thresh[0][CE_HV]=ThresholdPct_HV_Set1;
+   g_Thresh[0][CE_LV]=ThresholdPct_LV_Set1; g_Thresh[0][CE_HR]=ThresholdPct_HR_Set1; g_Thresh[0][CE_LR]=ThresholdPct_LR_Set1;
 
-   g_Color[0][CE_HV_HR]=Color_HV_HR_Set3; g_Color[0][CE_LV_LR]=Color_LV_LR_Set3; g_Color[0][CE_HV]=Color_HV_Set3;
-   g_Color[0][CE_LV]=Color_LV_Set3; g_Color[0][CE_HR]=Color_HR_Set3; g_Color[0][CE_LR]=Color_LR_Set3;
+   g_Color[0][CE_HV_HR]=Color_HV_HR_Set1; g_Color[0][CE_LV_LR]=Color_LV_LR_Set1; g_Color[0][CE_HV]=Color_HV_Set1;
+   g_Color[0][CE_LV]=Color_LV_Set1; g_Color[0][CE_HR]=Color_HR_Set1; g_Color[0][CE_LR]=Color_LR_Set1;
 
-   // SET 2: Map from Set1 inputs  
-   g_TF[1]=SlotTF_Set1; g_Depth[1]=RotationsDepth_Set1; g_MarkerSize[1]=MarkerSize_Set1;
-   g_Collapse[1]=CollapseTable_Set1; g_Draw[1]=DrawMarkers_Set1; g_Sound[1]=PlaySound_Set1; g_SoundFile[1]=AlertSound_Set1;
+   // SET 2: Map from Set3 inputs  
+   g_TF[1]=SlotTF_Set3; g_Depth[1]=RotationsDepth_Set3; g_MarkerSize[1]=MarkerSize_Set3;
+   g_Collapse[1]=CollapseTable_Set3; g_Draw[1]=DrawMarkers_Set3; g_Sound[1]=PlaySound_Set3; g_SoundFile[1]=AlertSound_Set3;
 
-   g_Enable[1][CE_HV_HR]=Enable_HV_HR_Set1; g_Enable[1][CE_LV_LR]=Enable_LV_LR_Set1; g_Enable[1][CE_HV]=Enable_HV_Set1;
-   g_Enable[1][CE_LV]=Enable_LV_Set1; g_Enable[1][CE_HR]=Enable_HR_Set1; g_Enable[1][CE_LR]=Enable_LR_Set1;
+   g_Enable[1][CE_HV_HR]=Enable_HV_HR_Set3; g_Enable[1][CE_LV_LR]=Enable_LV_LR_Set3; g_Enable[1][CE_HV]=Enable_HV_Set3;
+   g_Enable[1][CE_LV]=Enable_LV_Set3; g_Enable[1][CE_HR]=Enable_HR_Set3; g_Enable[1][CE_LR]=Enable_LR_Set3;
 
-   g_Thresh[1][CE_HV_HR]=ThresholdPct_HV_HR_Set1; g_Thresh[1][CE_LV_LR]=ThresholdPct_LV_LR_Set1; g_Thresh[1][CE_HV]=ThresholdPct_HV_Set1;
-   g_Thresh[1][CE_LV]=ThresholdPct_LV_Set1; g_Thresh[1][CE_HR]=ThresholdPct_HR_Set1; g_Thresh[1][CE_LR]=ThresholdPct_LR_Set1;
+   g_Thresh[1][CE_HV_HR]=ThresholdPct_HV_HR_Set3; g_Thresh[1][CE_LV_LR]=ThresholdPct_LV_LR_Set3; g_Thresh[1][CE_HV]=ThresholdPct_HV_Set3;
+   g_Thresh[1][CE_LV]=ThresholdPct_LV_Set3; g_Thresh[1][CE_HR]=ThresholdPct_HR_Set3; g_Thresh[1][CE_LR]=ThresholdPct_LR_Set3;
 
-   g_Color[1][CE_HV_HR]=Color_HV_HR_Set1; g_Color[1][CE_LV_LR]=Color_LV_LR_Set1; g_Color[1][CE_HV]=Color_HV_Set1;
-   g_Color[1][CE_LV]=Color_LV_Set1; g_Color[1][CE_HR]=Color_HR_Set1; g_Color[1][CE_LR]=Color_LR_Set1;
+   g_Color[1][CE_HV_HR]=Color_HV_HR_Set3; g_Color[1][CE_LV_LR]=Color_LV_LR_Set3; g_Color[1][CE_HV]=Color_HV_Set3;
+   g_Color[1][CE_LV]=Color_LV_Set3; g_Color[1][CE_HR]=Color_HR_Set3; g_Color[1][CE_LR]=Color_LR_Set3;
 
    // SET 3: Map from Set2 inputs
    g_TF[2]=SlotTF_Set2; g_Depth[2]=RotationsDepth_Set2; g_MarkerSize[2]=MarkerSize_Set2;
